@@ -95,7 +95,8 @@ class BodyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('NASA Space Lines'),
+        title: const Text('NASA Space Lines'), 
+        titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
       ),
       body: const Center(
         child: Text('Explore space'),
