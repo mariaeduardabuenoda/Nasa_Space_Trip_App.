@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class NasaService{
+class NasaService {
   Future<Map<String, dynamic>> getApod() async {
     const apiKey = String.fromEnvironment('NASA_API_KEY');
 
@@ -14,8 +14,7 @@ class NasaService{
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
     } else {
-      throw Exception(
-        'Erro ao buscar dados da NASA: ${response.statusCode}',);
+      throw Exception('Erro ao buscar dados da NASA: ${response.statusCode}');
     }
   }
 }

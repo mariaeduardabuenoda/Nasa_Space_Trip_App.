@@ -12,10 +12,7 @@ class HomeScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           // Plano de fundo
-          Image.asset(
-            'assets/imagens/background.jpg',
-            fit: BoxFit.cover,
-          ),
+          Image.asset('assets/imagens/background.jpg', fit: BoxFit.cover),
 
           // Conteúdo
           SafeArea(
@@ -35,10 +32,7 @@ class HomeScreen extends StatelessWidget {
 
                 const Text(
                   'Space Lines',
-                  style: TextStyle(
-                    fontSize: 32,
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(fontSize: 32, color: Colors.white),
                 ),
 
                 const SizedBox(height: 40),
@@ -52,10 +46,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
-                    'ENTER',
-                    style: TextStyle(fontSize: 18),
-                  ),
+                  child: const Text('ENTER', style: TextStyle(fontSize: 18)),
                 ),
               ],
             ),

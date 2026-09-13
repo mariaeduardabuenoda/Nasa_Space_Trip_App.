@@ -50,12 +50,7 @@ class BodyScreen extends StatelessWidget {
 
                 child: Row(
                   children: [
-
-                    Image.asset(
-                      planet.image,
-                      width: 90,
-                      height: 90,
-                    ),
+                    Image.asset(planet.image, width: 90, height: 90),
 
                     const SizedBox(width: 20),
 
@@ -64,7 +59,6 @@ class BodyScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
 
                         children: [
-
                           Text(
                             planet.name,
                             style: const TextStyle(
@@ -93,7 +87,6 @@ class BodyScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-
                         ],
                       ),
                     ),
