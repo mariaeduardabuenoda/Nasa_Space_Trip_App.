@@ -305,6 +305,7 @@ flutter run -d chrome --dart-define=NASA_API_KEY=YOUR_API_KEY
 For production environments, consider using a backend service to keep API credentials away from the client.
 \---
 
+---
 ### **🖼️ Assets**
 ##
 
