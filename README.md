@@ -6,7 +6,7 @@ The project allows users to explore different space destinations, view informati
 
 The application was developed as a practical project to improve mobile and web application development skills, API integration, UI development, state management, and problem-solving with Flutter.
 
-[click here to view the page](https://api.nasa.gov/)
+[click here to view the page](https://mariaeduardabuenoda.github.io/Nasa_Space_Trip_App./)
 
 ---
 
