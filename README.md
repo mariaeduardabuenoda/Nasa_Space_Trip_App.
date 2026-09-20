@@ -80,7 +80,7 @@ The project uses NASA's Astronomy Picture of the Day API.
 
 API endpoint:
 
-https://api.nasa.gov/planetary/apod
+[https://api.nasa.gov/](https://api.nasa.gov/)
 
 The API key is provided at runtime using Flutter's --dart-define mechanism.
 
@@ -205,7 +205,7 @@ flutter devices
 
 ### **🚀 Getting Started**
 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/Nasa_Space_Trip_App.git](https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.)
+git clone [https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.](https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.)
 
 Enter the project directory:
 ```text
