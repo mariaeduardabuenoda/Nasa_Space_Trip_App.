@@ -12,9 +12,13 @@ class NasaService {
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
-      return jsonDecode(response.body);
+      final data = jsonDecode(response.body) as Map<String, dynamic>;
+
+      return data;
     } else {
-      throw Exception('Erro ao buscar dados da NASA: ${response.statusCode}');
+      throw Exception(
+        'Erro ao buscar imagem da NASA: ${response.statusCode}',
+      );
     }
   }
 }
