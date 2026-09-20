@@ -205,32 +205,35 @@ flutter devices
 
 ### **🚀 Getting Started**
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/Nasa_Space_Trip_App.git
+git clone [https://github.com/YOUR_USERNAME/Nasa_Space_Trip_App.git](https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.)
 
 Enter the project directory:
-
+```text
 cd Nasa_Space_Trip_App
+```
 2. Install dependencies
-
 Run:
-
+```text
 flutter pub get
+```
 3. Verify the project
-
 Run:
-
+```text
 flutter analyze
+```
 
 The expected result is:
-
+```text
 No issues found!
+```
 4. Configure the NASA API key
 
 The project expects the NASA API key through --dart-define.
-
 Run:
 
+```text
 flutter run -d chrome --dart-define=NASA_API_KEY=YOUR_API_KEY
+```
 
 Replace:
 
@@ -242,7 +245,9 @@ with your NASA API key.
 
 To run the project on Chrome:
 
+```text
 flutter run -d chrome --dart-define=NASA_API_KEY=YOUR_API_KEY
+```
 
 The application should open in Chrome.
 
@@ -250,24 +255,23 @@ The application should open in Chrome.
 
 After starting the application:
 
-Home
-Open the application.
-Confirm that the NASA Space Lines home screen appears.
-Click ENTER.
-Destinations
-Select a destination.
-Confirm that the destination image loads.
-Verify the destination information.
-NASA APOD
-Open a destination.
-Scroll to the NASA APOD section.
-Wait for the NASA content to load.
-Verify the title and image/video.
-Gravity Calculator
-Enter a weight in kilograms.
-Click:
-CALCULAR PESO ESPACIAL
-Verify the calculated result.
+- Home
+- Open the application.
+- Confirm that the NASA Space Lines home screen appears.
+- Click ENTER.
+- Destinations
+- Select a destination.
+- Confirm that the destination image loads.
+- Verify the destination information.
+- NASA APOD
+- Open a destination.
+- Scroll to the NASA APOD section.
+- Wait for the NASA content to load.
+- Verify the title and image/video.
+- Gravity Calculator
+- Enter a weight in kilograms.
+- Click:CALCULATE SPATIAL WEIGHT
+- Verify the calculated result.
 ---
 
 ### **🔐 API Security**
@@ -284,8 +288,9 @@ const apiKey = String.fromEnvironment('NASA_API_KEY');
 
 Then the key is provided when running the application:
 
+```text
 flutter run -d chrome --dart-define=NASA_API_KEY=YOUR_API_KEY
-
+```
 For production environments, consider using a backend service to keep API credentials away from the client.
 \---
 
@@ -295,47 +300,47 @@ The project uses local images for the space destinations.
 
 Current assets include:
 
-background.jpg
-iss.png
-mars.png
-moon.png
-neptune.png
-saturn.png
-sun.png
+- background.jpg
+- iss.png
+- mars.png
+- moon.png
+- neptune.png
+- saturn.png
+- sun.png
 
 They are registered in pubspec.yaml:
-
+``` text
 flutter:
   uses-material-design: true
 
   assets:
     - assets/imagens/
-
+```
 ---
 
 ### **🧠 Main Development Concepts**
 
 This project was developed to practice several important Flutter concepts:
 
-StatelessWidget
-StatefulWidget
-Widget composition
-Navigation
-Navigator.push
-Navigator.pop
-ListView.builder
-FutureBuilder
-HTTP requests
-JSON decoding
-API integration
-TextEditingController
-State updates with setState
-Asset management
-Conditional rendering
-Error handling
-Flutter Web
-Responsive UI
-Runtime environment variables
+- StatelessWidget
+- StatefulWidget
+- Widget composition
+- Navigation
+- Navigator.push
+- Navigator.pop
+- ListView.builder
+- FutureBuilder
+- HTTP requests
+- JSON decoding
+- API integration
+- TextEditingController
+- State updates with setState
+- Asset management
+- Conditional rendering
+- Error handling
+- Flutter Web
+- Responsive UI
+- Runtime environment variables
 
 ---
 
@@ -344,8 +349,9 @@ Runtime environment variables
 Because the project runs on Flutter Web, external NASA images can require special handling when displayed from another domain.
 
 The application uses:
-
+```text
 webHtmlElementStrategy: WebHtmlElementStrategy.prefer
+```
 
 when displaying NASA APOD images.
 
@@ -358,15 +364,16 @@ Problem: NASA image does not appear
 
 Check:
 
-Internet connection
-NASA API key
-API response
-Browser console
-Image.network() configuration
+- Internet connection
+- NASA API key
+- API response
+- Browser console
+- Image.network() configuration
 
 Run:
-
+```text
 flutter analyze
+```
 
 Then restart the application.
 
@@ -374,7 +381,9 @@ Problem: Dependencies are missing
 
 Run:
 
+```text
 flutter pub get
+```
 Problem: Flutter Web is not available
 
 Check:
@@ -390,33 +399,34 @@ Check that the files exist:
 assets/imagens/
 
 and that pubspec.yaml contains:
-
+```text
 assets:
   - assets/imagens/
-
+```
 Then run:
-
+```text
 flutter pub get
+```
 ---
 
 ### **📈 Future Improvements**
 
 Possible future improvements include:
 
-NASA APOD video playback
-More celestial bodies
-Favorite destinations
-Search functionality
-Improved animations
-NASA mission information
-Space weather data
-User profiles
-Dark/light theme options
-Improved responsive layouts
-Automated tests
-Backend integration
-API caching
-Production deployment
+- NASA APOD video playback
+- More celestial bodies
+- Favorite destinations
+- Search functionality
+- Improved animations
+- NASA mission information
+- Space weather data
+- User profiles
+- Dark/light theme options
+- Improved responsive layouts
+- Automated tests
+- Backend integration
+- API caching
+- Production deployment
 ---
 
 ### **👩‍💻 Author**
