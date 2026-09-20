@@ -90,7 +90,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
 
     if (earthWeight == null || earthWeight <= 0) {
       setState(() {
-        _weightResult = 'Digite um peso válido.';
+        _weightResult = 'Enter a valid weight.';
       });
       return;
     }
@@ -102,7 +102,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
 
     setState(() {
       _weightResult =
-          'Na ${widget.name}, você pesaria ${spaceWeight.toStringAsFixed(2)} kg!';
+          'On ${widget.name}, you would weigh ${spaceWeight.toStringAsFixed(2)} kg!';
     });
   }
 
@@ -129,7 +129,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                 },
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
                 label: const Text(
-                  'Voltar para a Terra',
+                  'Return to Earth',
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
@@ -253,16 +253,35 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: const Text(
-                        'Não foi possível carregar a imagem da NASA.',
+                        'Unable to load NASA APOD.',
+                        style: TextStyle(color: Colors.white70, fontSize: 15),
+                      ),
+                    );
+                  }
+
+                  if (!snapshot.hasData) {
+                    return Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF102A4C),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Text(
+                        'No NASA APOD data available.',
                         style: TextStyle(color: Colors.white70, fontSize: 15),
                       ),
                     );
                   }
 
                   final apod = snapshot.data!;
-                  final String title = apod['title'] ?? 'NASA APOD';
-                  final String imageUrl = apod['url'] ?? '';
-                  final String mediaType = apod['media_type'] ?? 'image';
+
+                  final String title = apod['title']?.toString() ?? 'NASA APOD';
+
+                  final String imageUrl = apod['url']?.toString() ?? '';
+
+                  final String mediaType =
+                      apod['media_type']?.toString() ?? 'image';
 
                   return Container(
                     width: double.infinity,
@@ -283,12 +302,17 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                             letterSpacing: 1.5,
                           ),
                         ),
+
                         const SizedBox(height: 10),
+
                         const Text(
                           'Astronomical image of the day',
                           style: TextStyle(color: Colors.white70, fontSize: 15),
                         ),
+
                         const SizedBox(height: 20),
+
+                        // IMAGEM
                         if (mediaType == 'image' && imageUrl.isNotEmpty)
                           ClipRRect(
                             borderRadius: BorderRadius.circular(12),
@@ -296,10 +320,30 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                               imageUrl,
                               width: double.infinity,
                               fit: BoxFit.cover,
+
+                              // IMPORTANTE PARA FLUTTER WEB
                               webHtmlElementStrategy:
                                   WebHtmlElementStrategy.prefer,
+
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  width: double.infinity,
+                                  height: 250,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF071B36),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      'Unable to display NASA image.',
+                                      style: TextStyle(color: Colors.white70),
+                                    ),
+                                  ),
+                                );
+                              },
                             ),
                           )
+                        // VÍDEO
                         else if (mediaType == 'video')
                           Container(
                             width: double.infinity,
@@ -315,25 +359,31 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                                   color: Color(0xFFFF6B35),
                                   size: 70,
                                 ),
+
                                 const SizedBox(height: 15),
+
                                 const Text(
-                                  'NASA APOD de hoje',
+                                  "Today's NASA APOD",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
+
                                 const SizedBox(height: 8),
+
                                 const Text(
-                                  'O conteúdo astronômico de hoje é um vídeo.',
+                                  "Today's astronomical content is a video.",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white70,
                                     fontSize: 14,
                                   ),
                                 ),
+
                                 const SizedBox(height: 15),
+
                                 Text(
                                   imageUrl,
                                   textAlign: TextAlign.center,
@@ -344,8 +394,24 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                                 ),
                               ],
                             ),
+                          )
+                        // CASO INESPERADO
+                        else
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF071B36),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: const Text(
+                              'NASA content unavailable.',
+                              style: TextStyle(color: Colors.white70),
+                            ),
                           ),
+
                         const SizedBox(height: 15),
+
                         Text(
                           title,
                           style: const TextStyle(
@@ -384,7 +450,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      'Descubra quanto você pesaria em ${widget.name}.',
+                      'Find out how much you would weigh in${widget.name}.',
                       style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 15,
@@ -398,7 +464,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                       ),
                       style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        hintText: 'Digite seu peso em kg na Terra',
+                        hintText: 'Enter your weight in kg on Earth',
                         hintStyle: const TextStyle(color: Colors.white54),
                         filled: true,
                         fillColor: const Color(0xFF071B36),
@@ -426,7 +492,7 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                           ),
                         ),
                         child: const Text(
-                          'CALCULAR PESO ESPACIAL',
+                          'CALCULATE SPATIAL WEIGHT',
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
