@@ -55,18 +55,18 @@ The application integrates with NASA's APOD API.
 
 The application dynamically retrieves:
 
-APOD date
-Title
-Media type
-Media URL
+- APOD date
+- Title
+- Media type
+- Media URL
 
 Depending on the content returned by NASA, the application handles:
 
-Image
+- Image
 
 or
 
-Video
+- Video
 
 For image content, the application displays the NASA image directly inside the application.
 
@@ -101,19 +101,22 @@ Note: because this project runs on Flutter Web, values passed with --dart-define
 
 
 
-### 🛠️ **Technologies**
----
-Technology	Purpose
-Flutter	Application framework
-Dart	Programming language
-Flutter Web	Web application runtime
-Material Design	UI components
-NASA APOD API	Astronomy data and media
-HTTP	API communication
-JSON	API data format
-VS Code	Development environment
-Git	Version control
-GitHub	Source code repository
+### 🛠️**Technologies**
+
+| Technology | Purpose |
+| --- | --- |
+| Flutter | Application framework |
+| Dart | Programming language |
+| Flutter Web | Web application runtime |
+| Material Design | UI components |
+| NASA APOD API | Astronomy data and media |
+| HTTP | API communication |
+| JSON | API data format |
+| VS Code | Development environment |
+| Git | Version control |
+| GitHub | Source code repository |
+
+--- 
 
 ### 📂 **Project Structure**
 ---
@@ -166,20 +169,20 @@ Nasa_Space_Trip_App/
 The table below provides a quick traceability guide for developers who want to run, understand, or troubleshoot the project.
 
 Step	Component	Location	Purpose	Verification
-1	Flutter SDK	Local environment	Provides the development framework	flutter --version
-2	Project dependencies	pubspec.yaml	Defines project packages	flutter pub get
-3	Assets	assets/imagens/	Stores application images	Check image files exist
-4	Main entry point	lib/main.dart	Starts the application	Run the project
-5	Home screen	lib/screens/home_screen.dart	Application landing screen	Home screen appears
-6	Destination screen	lib/screens/body_screen.dart	Displays available destinations	Destination list appears
-7	Planet data	lib/screens/data/planets.dart	Stores destination information	Destination cards load
-8	Detail screen	lib/screens/planet_detail_screen.dart	Displays destination details	Select a destination
-9	Gravity calculator	planet_detail_screen.dart	Calculates destination weight	Enter a valid weight
-10	NASA service	lib/services/nasa_service.dart	Communicates with NASA API	API request returns data
-11	NASA API key	Runtime environment	Authenticates API request	--dart-define
-12	NASA APOD	planet_detail_screen.dart	Displays NASA daily content	Image/video appears
-13	Flutter Web	Chrome	Runs the application	flutter run -d chrome
-14	Code analysis	Flutter CLI	Checks code quality	flutter analyze
+- 1	Flutter SDK	Local environment	Provides the development framework	flutter --version
+- 2	Project dependencies	pubspec.yaml	Defines project packages	flutter pub get
+- 3	Assets	assets/imagens/	Stores application images	Check image files exist
+- 4	Main entry point	lib/main.dart	Starts the application	Run the project
+- 5	Home screen	lib/screens/home_screen.dart	Application landing screen	Home screen appears
+- 6	Destination screen	lib/screens/body_screen.dart	Displays available destinations	Destination list appears
+- 7	Planet data	lib/screens/data/planets.dart	Stores destination information	Destination cards load
+- 8	Detail screen	lib/screens/planet_detail_screen.dart	Displays destination details	Select a destination
+- 9	Gravity calculator	planet_detail_screen.dart	Calculates destination weight	Enter a valid weight
+- 10	NASA service	lib/services/nasa_service.dart	Communicates with NASA API	API request returns data
+- 11	NASA API key	Runtime environment	Authenticates API request	--dart-define
+- 12	NASA APOD	planet_detail_screen.dart	Displays NASA daily content	Image/video appears
+- 13	Flutter Web	Chrome	Runs the application	flutter run -d chrome
+- 14	Code analysis	Flutter CLI	Checks code quality	flutter analyze
 
 ---
 
@@ -187,37 +190,39 @@ Step	Component	Location	Purpose	Verification
 
 Before running the project, make sure you have:
 
-Flutter SDK
-Dart SDK
-Git
-Visual Studio Code or another compatible IDE
-Google Chrome
-Internet connection
-NASA API key
+- Flutter SDK
+- Dart SDK
+- Git
+- Visual Studio Code or another compatible IDE
+- Google Chrome
+- Internet connection
+- NASA API key
 
 Check Flutter installation:
 
+```text
 flutter --version
-
+```
 Check available devices:
 
 flutter devices
+
 ---
 
 ### **🚀 Getting Started**
-1. Clone the repository
+- 1. Clone the repository
 git clone [https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.](https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.)
 
 Enter the project directory:
 ```text
 cd Nasa_Space_Trip_App
 ```
-2. Install dependencies
+- 2. Install dependencies
 Run:
 ```text
 flutter pub get
 ```
-3. Verify the project
+- 3. Verify the project
 Run:
 ```text
 flutter analyze
@@ -227,7 +232,7 @@ The expected result is:
 ```text
 No issues found!
 ```
-4. Configure the NASA API key
+- 4. Configure the NASA API key
 
 The project expects the NASA API key through --dart-define.
 Run:
@@ -242,7 +247,7 @@ YOUR_API_KEY
 
 with your NASA API key.
 
-▶️ Running the Application
+- ▶️ Running the Application
 
 To run the project on Chrome:
 
@@ -252,7 +257,7 @@ flutter run -d chrome --dart-define=NASA_API_KEY=YOUR_API_KEY
 
 The application should open in Chrome.
 
-🧪 Testing the Main Features
+- 🧪 Testing the Main Features
 
 After starting the application:
 
