@@ -17,7 +17,7 @@ class NasaService {
       return data;
     } else {
       throw Exception(
-        'Erro ao buscar imagem da NASA: ${response.statusCode}',
+        'Error fetching NASA image: ${response.statusCode}',
       );
     }
   }

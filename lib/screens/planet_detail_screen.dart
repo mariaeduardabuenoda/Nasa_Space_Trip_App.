@@ -320,10 +320,12 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                               imageUrl,
                               width: double.infinity,
                               fit: BoxFit.cover,
+                              webHtmlElementStrategy:
+                                  WebHtmlElementStrategy.prefer,
                               errorBuilder: (context, error, stackTrace) {
                                 return Container(
                                   width: double.infinity,
-                                  height: 250,
+                                  height: 300,
                                   decoration: BoxDecoration(
                                     color: const Color(0xFF071B36),
                                     borderRadius: BorderRadius.circular(12),
