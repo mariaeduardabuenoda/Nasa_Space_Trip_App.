@@ -320,11 +320,6 @@ class _PlanetDetailScreenState extends State<PlanetDetailScreen> {
                               imageUrl,
                               width: double.infinity,
                               fit: BoxFit.cover,
-
-                              // IMPORTANTE PARA FLUTTER WEB
-                              webHtmlElementStrategy:
-                                  WebHtmlElementStrategy.prefer,
-
                               errorBuilder: (context, error, stackTrace) {
                                 return Container(
                                   width: double.infinity,
