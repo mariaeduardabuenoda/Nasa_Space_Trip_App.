@@ -8,7 +8,8 @@ The application was developed as a practical project to improve mobile and web a
 
 ---
 
-## 🌌 **Project Overview**
+### 🌌 **Project Overview**
+
 
 NASA Space Lines provides an interactive space-themed experience where users can:
 
@@ -27,7 +28,7 @@ NASA Space Lines provides an interactive space-themed experience where users can
 ## ✨ **Features**
 
 ### 🪐 **Space Destinations**
-
+##
 Users can select different destinations:
 
 - Mars
@@ -50,6 +51,7 @@ Each destination contains:
 
 
 ### 🌠 **NASA Astronomy Picture of the Day**
+##
 
 The application integrates with NASA's APOD API.
 
@@ -72,9 +74,10 @@ For image content, the application displays the NASA image directly inside the a
 
 For video content, the application displays a dedicated video information card.
 
-
-### 🛰️ **NASA API Integration**
 ---
+### 🛰️ **NASA API Integration**
+##
+
 
 The project uses NASA's Astronomy Picture of the Day API.
 
@@ -99,9 +102,9 @@ This keeps the key outside the source code.
 
 Note: because this project runs on Flutter Web, values passed with --dart-define can ultimately be exposed in the client application. For a production application, a backend/proxy and appropriate API restrictions should be considered.
 
-
-
+---
 ### 🛠️**Technologies**
+##
 
 | Technology | Purpose |
 | --- | --- |
@@ -119,7 +122,7 @@ Note: because this project runs on Flutter Web, values passed with --dart-define
 --- 
 
 ### 📂 **Project Structure**
----
+##
 ```text
 Nasa_Space_Trip_App/
 │
@@ -164,7 +167,7 @@ Nasa_Space_Trip_App/
 ---
 
 ### 🧭 **Traceability / Setup Table**
----
+##
 
 The table below provides a quick traceability guide for developers who want to run, understand, or troubleshoot the project.
 
@@ -187,6 +190,7 @@ Step	Component	Location	Purpose	Verification
 ---
 
 ### **💻 Requirements**
+##
 
 Before running the project, make sure you have:
 
@@ -210,6 +214,7 @@ flutter devices
 ---
 
 ### **🚀 Getting Started**
+##
 - 1. Clone the repository
 git clone [https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.](https://github.com/mariaeduardabuenoda/Nasa_Space_Trip_App.)
 
@@ -281,6 +286,7 @@ After starting the application:
 ---
 
 ### **🔐 API Security**
+##
 
 Never commit API keys directly into source code.
 
@@ -301,6 +307,7 @@ For production environments, consider using a backend service to keep API creden
 \---
 
 ### **🖼️ Assets**
+##
 
 The project uses local images for the space destinations.
 
@@ -325,6 +332,7 @@ flutter:
 ---
 
 ### **🧠 Main Development Concepts**
+##
 
 This project was developed to practice several important Flutter concepts:
 
@@ -351,6 +359,7 @@ This project was developed to practice several important Flutter concepts:
 ---
 
 ### **🌐 Flutter Web and NASA Images**
+##
 
 Because the project runs on Flutter Web, external NASA images can require special handling when displayed from another domain.
 
@@ -366,6 +375,7 @@ This allows the Flutter Web application to display external images in the browse
 ---
 
 ### 🧩 **Troubleshooting**
+##
 Problem: NASA image does not appear
 
 Check:
@@ -416,6 +426,7 @@ flutter pub get
 ---
 
 ### **📈 Future Improvements**
+##
 
 Possible future improvements include:
 
@@ -436,12 +447,14 @@ Possible future improvements include:
 ---
 
 ### **👩‍💻 Author**
+##
 
 Developed as a Flutter/Dart project focused on application development, API integration, and space exploration.
 
 ---
 
 ### **📄 License**
+##
 
 This project is intended for educational and portfolio purposes.
 
