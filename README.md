@@ -117,6 +117,7 @@ GitHub	Source code repository
 
 ### 📂 **Project Structure**
 ---
+```text
 Nasa_Space_Trip_App/
 │
 ├── android/
@@ -156,7 +157,7 @@ Nasa_Space_Trip_App/
 ├── pubspec.lock
 ├── analysis_options.yaml
 └── README.md
-
+```
 ---
 
 ### 🧭 **Traceability / Setup Table**
@@ -359,7 +360,7 @@ This allows the Flutter Web application to display external images in the browse
 
 ---
 
-##🧩 Troubleshooting
+### 🧩 **Troubleshooting**
 Problem: NASA image does not appear
 
 Check:
