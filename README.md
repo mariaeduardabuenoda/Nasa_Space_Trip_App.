@@ -9,7 +9,7 @@ The application was developed as a practical project to improve mobile and web a
 ---
 
 ### 🌌 **Project Overview**
-
+##
 
 NASA Space Lines provides an interactive space-themed experience where users can:
 
@@ -24,11 +24,10 @@ NASA Space Lines provides an interactive space-themed experience where users can
 - Run the project through Flutter Web
 
 ---
-
 ## ✨ **Features**
 
 ### 🪐 **Space Destinations**
-##
+
 Users can select different destinations:
 
 - Mars
